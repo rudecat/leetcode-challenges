@@ -1,29 +1,9 @@
+package com.rudecate.leetcode.threeSum;
 import java.util.List;
 import java.util.Arrays;
 import java.util.ArrayList;
 
-
-public class ThreeSum {
-  static public void main(String[] args) {
-    ThreeSumSolution solution = new ThreeSumSolution();
-    check(solution.threeSum(new int[]{}),"[]");
-    check(solution.threeSum(new int[]{0}),"[]");
-    check(solution.threeSum(new int[]{0,0,0,0}),"[[0, 0, 0]]");
-    check(solution.threeSum(new int[]{-1,0,1,2,-1,-4}),"[[-1, -1, 2], [-1, 0, 1]]");
-  }
-
-  static private void check(List<List<Integer>> output, String expect){
-    if (output.toString().equals(expect)){
-      System.out.println("Correct");
-    }else{
-      System.out.println("Wrong");
-      System.out.println("Output is " + output.toString());
-      System.out.println("Expect is " + expect);
-    }
-  }
-}
-
-class ThreeSumSolution {
+class ThreeSum {
   public List<List<Integer>> threeSum(int[] nums) {
       //sort the integer array
       Arrays.sort(nums);
